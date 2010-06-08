@@ -1,0 +1,21 @@
+--- origsrc/couchdb-glib-0.6.91/Makefile.am	2010-05-04 11:40:02.000000000 -0500
++++ src/couchdb-glib-0.6.91/Makefile.am	2010-06-08 04:41:21.332142600 -0500
+@@ -15,8 +15,7 @@ desktopcouch-glib-1.0.pc: desktopcouch-g
+ pkgconfig_DATA = $(pcfiles)
+ pkgconfigdir = $(libdir)/pkgconfig
+ 
+-couchdbdocdir = ${datadir}/doc/couchdb-glib
+-couchdbdoc_DATA =		\
++noinst_DATA =		\
+ 	README				\
+ 	LICENSE				\
+ 	couchdb-glib.doap	\
+@@ -25,7 +24,7 @@ couchdbdoc_DATA =		\
+ EXTRA_DIST =			\
+ 	couchdb-glib.pc.in	\
+ 	desktopcouch-glib.pc.in	\
+-	$(couchdbdoc_DATA)
++	$(noinst_DATA)
+ 
+ dist-hook:
+ 	git log --stat > ChangeLog.in && \

@@ -1,0 +1,17 @@
+FIXME: this leaves generated files in $(srcdir)
+
+--- origsrc/couchdb-glib-0.6.91/bindings/mono/Makefile.am	2010-05-27 04:50:54.000000000 -0500
++++ src/couchdb-glib-0.6.91/bindings/mono/Makefile.am	2010-06-08 04:24:37.993754900 -0500
+@@ -31,9 +31,10 @@ couchdbglibsharp_DATA = couchdb-glib-sha
+ couchdb-glib-sharp.dll: $(generated_CS_objects)
+ 	$(MONO_CSC) -unsafe -target:library -pkg:glib-sharp-2.0 -out:couchdb-glib-sharp.dll *.cs
+ 
+-$(generated_CS_objects): $(srcdir)/couchdb-glib-api.xml
++$(generated_CS_objects): couchdb-glib-api.xml
+ 	$(MONO_GAPI_CODEGEN) --outdir=. $(GTKSHARP_CFLAGS) --generate $<
+ 
+ couchdb-glib-api.xml: couchdb-glib.sources
+-	$(MONO_GAPI_PARSER) $<
++	cd $(srcdir) && \
++	$(MONO_GAPI_PARSER) $< && \
+ 	$(MONO_GAPI_FIXUP) --api=couchdb-glib-api.xml --metadata=couchdb-glib-api.metadata

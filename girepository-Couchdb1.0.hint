@@ -1,0 +1,7 @@
+category: Database
+requires: girepository-GLib2.0 girepository-Json1.0 libcouchdb-glib1.0_2
+external-source: couchdb-glib1.0
+sdesc: "GLib CouchDB client library (GObject Introspection data)"
+ldesc: "CouchDB-glib is a GLib-based implementation of the client side 
+protocol for CouchDB, a replication and synchronization database from 
+the Apache project."

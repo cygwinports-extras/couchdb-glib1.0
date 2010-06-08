@@ -1,0 +1,8 @@
+--- origsrc/couchdb-glib-0.6.91/bindings/mono/couchdb-glib-sharp.dll.config.in	2010-05-04 10:56:12.000000000 -0500
++++ src/couchdb-glib-0.6.91/bindings/mono/couchdb-glib-sharp.dll.config.in	2010-06-08 04:17:38.418756600 -0500
+@@ -1,4 +1,5 @@
+ <configuration>
+   <dllmap dll="couchdb-glib-sharp.dll" target="libcouchdb-glib-1.0.so.@LIBCOUCHDBGLIB_CURRENT@"/>
++  <dllmap dll="couchdb-glib-sharp.dll" target="cygcouchdb-glib-1.0-@LIBCOUCHDBGLIB_CURRENT@.dll" os="cygwin"/>
+ </configuration>
+ 

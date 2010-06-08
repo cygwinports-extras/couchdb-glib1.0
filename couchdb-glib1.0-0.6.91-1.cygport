@@ -1,0 +1,19 @@
+ORIG_PN="couchdb-glib"
+inherit gnome2
+
+DESCRIPTION="GLib CouchDB client library"
+HOMEPAGE="https://launchpad.net/couchdb-glib"
+
+PATCH_URI="
+	0.6.91-dllmap-cygwin.patch
+	0.6.91-doc-install.patch
+	0.6.91-gir-vpath.patch
+	0.6.91-mono-vpath.patch
+	0.6.91-no-undefined.patch
+"
+
+PKG_NAMES="${PN} lib${PN}_2 lib${PN}-devel girepository-Couchdb1.0 mono-couchdb-glib-sharp1.0"
+libcouchdb_glib1_0_2_CONTENTS="usr/bin/*-1.0-2.dll usr/share/doc/"
+libcouchdb_glib1_0_devel_CONTENTS="usr/include/ usr/lib/lib* usr/lib/pkgconfig/ usr/share/gtk-doc/"
+girepository_Couchdb1_0_CONTENTS="usr/*/gir*/*1.0.*"
+mono_couchdb_glib_sharp1_0_CONTENTS="usr/lib/couchdb-glib-sharp-1.0/"

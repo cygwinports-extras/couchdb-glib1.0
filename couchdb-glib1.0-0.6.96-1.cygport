@@ -7,7 +7,6 @@ HOMEPAGE="https://launchpad.net/couchdb-glib"
 PATCH_URI="
 	0.6.91-dllmap-cygwin.patch
 	0.6.91-doc-install.patch
-	0.6.91-gir-vpath.patch
 	0.6.91-mono-vpath.patch
 	0.6.91-no-undefined.patch
 "

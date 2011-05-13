@@ -1,0 +1,11 @@
+--- origsrc/couchdb-glib-0.7.2/desktopcouch-glib/Makefile.am	2011-05-13 14:36:41.632580700 -0500
++++ src/couchdb-glib-0.7.2/desktopcouch-glib/Makefile.am	2011-05-13 14:45:04.464418000 -0500
+@@ -31,7 +31,7 @@ h_DATA = 				\
+ 
+ -include $(INTROSPECTION_MAKEFILE)
+ INTROSPECTION_GIRS =
+-INTROSPECTION_SCANNER_ARGS = --add-include-path=$(srcdir) --add-include-path=$(top_srcdir)/couchdb-glib
++INTROSPECTION_SCANNER_ARGS = --add-include-path=$(srcdir) --add-include-path=$(top_builddir)/couchdb-glib
+ INTROSPECTION_COMPILER_ARGS = --includedir=$(srcdir) --includedir=$(top_builddir)/couchdb-glib
+ 
+ if HAVE_INTROSPECTION

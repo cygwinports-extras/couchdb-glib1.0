@@ -1,5 +1,5 @@
 category: Database
-requires: libdbus-glib_1_2 libglib2.0_0 libgnome-keyring0 libjson-glib1.0_0 libopenssl098 libsoup2.4_1 libsoup-gnome2.4_1 libuuid1
+requires: libglib2.0_0 libgnome-keyring0 libjson-glib1.0_0 libopenssl098 libsoup2.4_1 libsoup-gnome2.4_1 libuuid1
 external-source: couchdb-glib1.0
 sdesc: "GLib CouchDB client library (runtime)"
 ldesc: "CouchDB-glib is a GLib-based implementation of the client side 
